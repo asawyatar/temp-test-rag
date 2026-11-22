@@ -1,0 +1,28 @@
+<!doctype html>
+<!-- SYNTHETIC FIXTURE: a page whose content only JavaScript draws, shaped like
+     Termly's policy viewer (titles are styled divs; sentences are split across
+     inline spans). Not real data. -->
+<html lang="en">
+<head><meta charset="utf-8"><title>Policy Viewer</title>
+<style>body { font-size: 14px; } .title { font-size: 26px; font-weight: bold; } .section { font-size: 19px; font-weight: bold; }</style>
+</head>
+<body>
+<nav>Home | Login</nav>
+<div id="root"></div>
+<script>
+  const root = document.getElementById("root");
+  function block(cls, html) { const d = document.createElement("div"); if (cls) d.className = cls; d.innerHTML = html; root.appendChild(d); }
+  block("title", "PRIVACY POLICY");
+  block("", "<span>Last updated</span> <span>January 01, 2026</span>");
+  block("", "This notice explains how <strong>Qamar Bay</strong> handles <span>personal information</span> collected through the resident app, including names, unit numbers and visitor invitations.");
+  block("section", "1. WHAT INFORMATION DO WE COLLECT?");
+  block("", "We collect the information you give us when you register, book a facility or invite a visitor. We do not sell personal information to anyone.");
+  block("", "Questions? Contact <strong>us</strong> anytime.");
+  block("section", "2. HOW LONG DO WE KEEP YOUR INFORMATION?");
+  block("", "We keep visitor records for 90 days and payment records for as long as the law requires.");
+  block("section", "٣. كيف نحمي معلوماتك؟");
+  block("", "نحفظ المعلومات على خوادم مشفّرة، ولا يطّلع عليها إلا الموظفون المخوّلون.");
+</script>
+<footer>© 2026 Example. All rights reserved.</footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+# Local development database only. These credentials are not secrets:
+# the container is reachable from this machine alone.
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    # Come back after the Docker daemon restarts (Colima restarts it at the end
+    # of every boot). `docker compose down` / `make db-down` still stops it.
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: atar
+      POSTGRES_PASSWORD: atar_local_dev
+      POSTGRES_DB: atar_ai
+    ports:
+      # Host 5433 so it cannot collide with a Postgres installed on the machine.
+      - "127.0.0.1:5433:5432"
+    volumes:
+      # A named volume only, no folders mounted from the host: some Docker
+      # runtimes (Colima) do not share every host path with their VM.
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U atar -d atar_ai"]
+      interval: 2s
+      timeout: 2s
+      retries: 15
+
+volumes:
+  pgdata:

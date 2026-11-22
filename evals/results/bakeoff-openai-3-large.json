@@ -1,0 +1,781 @@
+{
+  "key": "openai-3-large",
+  "model": "text-embedding-3-large@1024",
+  "run_at": "2026-11-17T09:08:13+00:00",
+  "chunker_version": "2",
+  "chunks": 84,
+  "device": "api",
+  "ingest_seconds": 10.0,
+  "mean_query_ms": 280.2,
+  "summary": {
+    "overall": {
+      "n": 26,
+      "hit@1": 0.923,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr": 0.962,
+      "margin_mean": 0.214,
+      "margin_min": -0.031
+    },
+    "by_language_pair": {
+      "ar->ar": {
+        "n": 7,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "margin_mean": 0.23,
+        "margin_min": 0.121
+      },
+      "ar->en": {
+        "n": 5,
+        "hit@1": 0.8,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.9,
+        "margin_mean": 0.14,
+        "margin_min": -0.001
+      },
+      "ar->shared": {
+        "n": 1,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "margin_mean": 0.335,
+        "margin_min": 0.335
+      },
+      "en->ar": {
+        "n": 6,
+        "hit@1": 0.833,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.917,
+        "margin_mean": 0.161,
+        "margin_min": -0.031
+      },
+      "en->en": {
+        "n": 6,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "margin_mean": 0.252,
+        "margin_min": 0.159
+      },
+      "en->shared": {
+        "n": 1,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "margin_mean": 0.448,
+        "margin_min": 0.448
+      }
+    },
+    "by_kind": {
+      "cross_language": {
+        "n": 11,
+        "hit@1": 0.818,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 0.909,
+        "margin_mean": 0.151,
+        "margin_min": -0.031
+      },
+      "same_language": {
+        "n": 13,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "margin_mean": 0.241,
+        "margin_min": 0.121
+      },
+      "shared": {
+        "n": 2,
+        "hit@1": 1.0,
+        "hit@3": 1.0,
+        "hit@5": 1.0,
+        "mrr": 1.0,
+        "margin_mean": 0.392,
+        "margin_min": 0.335
+      }
+    },
+    "top_score": {
+      "answerable_min": 0.3979,
+      "answerable_median": 0.5796,
+      "unanswerable_max": 0.5873,
+      "unanswerable": {
+        "a-en-27": 0.2878,
+        "b-ar-28": 0.3623,
+        "a-en-29": 0.5873,
+        "b-ar-30": 0.35
+      },
+      "separable": false
+    },
+    "weakest": [
+      {
+        "id": "b-en-20",
+        "pair": "en->ar",
+        "margin": -0.0314
+      },
+      {
+        "id": "b-ar-24",
+        "pair": "ar->en",
+        "margin": -0.0007
+      },
+      {
+        "id": "a-en-17",
+        "pair": "en->ar",
+        "margin": 0.0208
+      }
+    ],
+    "misses": [
+      {
+        "id": "b-en-20",
+        "pair": "en->ar",
+        "rank": 2,
+        "top_source": "visitors-and-access.en.md"
+      },
+      {
+        "id": "b-ar-24",
+        "pair": "ar->en",
+        "rank": 2,
+        "top_source": "app-help.ar.md"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "a-en-01",
+      "kind": "same_language",
+      "pair": "en->en",
+      "rank": 1,
+      "top_score": 0.6402,
+      "top_source": "community-rules.en.md",
+      "retrieved": [
+        "community-rules.en.md",
+        "notice-board.en.md",
+        "community-rules.en.md",
+        "community-rules.en.md",
+        "maintenance.en.md",
+        "facilities-booking.en.md",
+        "notice-board.en.md",
+        "notice-board.en.md",
+        "app-help.en.md",
+        "facilities-booking.en.md"
+      ],
+      "margin": 0.2591
+    },
+    {
+      "id": "a-en-02",
+      "kind": "same_language",
+      "pair": "en->en",
+      "rank": 1,
+      "top_score": 0.6393,
+      "top_source": "maintenance.en.md",
+      "retrieved": [
+        "maintenance.en.md",
+        "maintenance.en.md",
+        "maintenance.en.md",
+        "maintenance.en.md",
+        "notice-board.en.md",
+        "resident-faq.en.json",
+        "app-help.en.md",
+        "resident-faq.en.json",
+        "safety-guide.en.pdf",
+        "notice-board.en.md"
+      ],
+      "margin": 0.2557
+    },
+    {
+      "id": "a-en-03",
+      "kind": "same_language",
+      "pair": "en->en",
+      "rank": 1,
+      "top_score": 0.6287,
+      "top_source": "resident-faq.en.json",
+      "retrieved": [
+        "resident-faq.en.json",
+        "notice-board.en.md",
+        "maintenance.en.md",
+        "notice-board.en.md",
+        "resident-faq.en.json",
+        "community-rules.en.md",
+        "notice-board.en.md",
+        "maintenance.en.md",
+        "app-help.en.md",
+        "resident-faq.en.json"
+      ],
+      "margin": 0.2891
+    },
+    {
+      "id": "a-en-04",
+      "kind": "same_language",
+      "pair": "en->en",
+      "rank": 1,
+      "top_score": 0.5211,
+      "top_source": "safety-guide.en.pdf",
+      "retrieved": [
+        "safety-guide.en.pdf",
+        "safety-guide.en.pdf",
+        "notice-board.en.md",
+        "resident-faq.en.json",
+        "maintenance.en.md",
+        "facilities-booking.en.md",
+        "community-rules.en.md",
+        "notice-board.en.md",
+        "community-rules.en.md",
+        "facilities-booking.en.md"
+      ],
+      "margin": 0.2852
+    },
+    {
+      "id": "a-ar-05",
+      "kind": "same_language",
+      "pair": "ar->ar",
+      "rank": 1,
+      "top_score": 0.5919,
+      "top_source": "fees-and-payments.ar.md",
+      "retrieved": [
+        "fees-and-payments.ar.md",
+        "fees-and-payments.ar.md",
+        "fees-and-payments.ar.md",
+        "resident-faq.en.json",
+        "maintenance.en.md",
+        "fees-and-payments.ar.md",
+        "lease-and-move-out.ar.docx",
+        "fees-and-payments.ar.md",
+        "lease-and-move-out.ar.docx",
+        "facilities-booking.en.md"
+      ],
+      "margin": 0.1883
+    },
+    {
+      "id": "a-ar-06",
+      "kind": "same_language",
+      "pair": "ar->ar",
+      "rank": 1,
+      "top_score": 0.5727,
+      "top_source": "visitors-and-access.ar.md",
+      "retrieved": [
+        "visitors-and-access.ar.md",
+        "visitors-and-access.ar.md",
+        "visitors-and-access.ar.md",
+        "visitors-and-access.ar.md",
+        "app-help.ar.md",
+        "app-help.en.md",
+        "community-rules.en.md",
+        "resident-faq.en.json",
+        "notice-board.en.md",
+        "facilities-booking.en.md"
+      ],
+      "margin": 0.1208
+    },
+    {
+      "id": "a-ar-07",
+      "kind": "same_language",
+      "pair": "ar->ar",
+      "rank": 1,
+      "top_score": 0.6318,
+      "top_source": "lease-and-move-out.ar.docx",
+      "retrieved": [
+        "lease-and-move-out.ar.docx",
+        "lease-and-move-out.ar.docx",
+        "lease-and-move-out.ar.docx",
+        "fees-and-payments.ar.md",
+        "visitors-and-access.ar.md",
+        "maintenance.en.md",
+        "fees-and-payments.ar.md",
+        "visitors-and-access.ar.md",
+        "fees-and-payments.ar.md",
+        "app-help.ar.md"
+      ],
+      "margin": 0.2847
+    },
+    {
+      "id": "b-ar-08",
+      "kind": "same_language",
+      "pair": "ar->ar",
+      "rank": 1,
+      "top_score": 0.6925,
+      "top_source": "facilities-booking.ar.md",
+      "retrieved": [
+        "facilities-booking.ar.md",
+        "facilities-booking.ar.md",
+        "facilities-booking.ar.md",
+        "facilities-booking.ar.md",
+        "community-rules.ar.md",
+        "maintenance.ar.md",
+        "resident-faq.ar.json",
+        "community-rules.ar.md",
+        "fees-and-payments.en.md",
+        "resident-faq.ar.json"
+      ],
+      "margin": 0.2791
+    },
+    {
+      "id": "b-ar-09",
+      "kind": "same_language",
+      "pair": "ar->ar",
+      "rank": 1,
+      "top_score": 0.6148,
+      "top_source": "maintenance.ar.md",
+      "retrieved": [
+        "maintenance.ar.md",
+        "fees-and-payments.en.md",
+        "maintenance.ar.md",
+        "maintenance.ar.md",
+        "maintenance.ar.md",
+        "notice-board.ar.md",
+        "safety-guide.ar.pdf",
+        "lease-and-move-out.en.docx",
+        "resident-faq.ar.json",
+        "fees-and-payments.en.md"
+      ],
+      "margin": 0.2339
+    },
+    {
+      "id": "b-ar-10",
+      "kind": "same_language",
+      "pair": "ar->ar",
+      "rank": 1,
+      "top_score": 0.6524,
+      "top_source": "resident-faq.ar.json",
+      "retrieved": [
+        "resident-faq.ar.json",
+        "notice-board.ar.md",
+        "maintenance.ar.md",
+        "notice-board.ar.md",
+        "resident-faq.ar.json",
+        "maintenance.ar.md",
+        "safety-guide.ar.pdf",
+        "safety-guide.ar.pdf",
+        "community-rules.ar.md",
+        "facilities-booking.ar.md"
+      ],
+      "margin": 0.3077
+    },
+    {
+      "id": "b-ar-11",
+      "kind": "same_language",
+      "pair": "ar->ar",
+      "rank": 1,
+      "top_score": 0.5314,
+      "top_source": "safety-guide.ar.pdf",
+      "retrieved": [
+        "safety-guide.ar.pdf",
+        "safety-guide.ar.pdf",
+        "maintenance.ar.md",
+        "visitors-and-access.en.md",
+        "visitors-and-access.en.md",
+        "maintenance.ar.md",
+        "resident-faq.ar.json",
+        "visitors-and-access.en.md",
+        "resident-faq.ar.json",
+        "resident-faq.ar.json"
+      ],
+      "margin": 0.1987
+    },
+    {
+      "id": "b-en-12",
+      "kind": "same_language",
+      "pair": "en->en",
+      "rank": 1,
+      "top_score": 0.5432,
+      "top_source": "fees-and-payments.en.md",
+      "retrieved": [
+        "fees-and-payments.en.md",
+        "fees-and-payments.en.md",
+        "fees-and-payments.en.md",
+        "fees-and-payments.en.md",
+        "lease-and-move-out.en.docx",
+        "app-help.en.md",
+        "lease-and-move-out.en.docx",
+        "app-help.ar.md",
+        "lease-and-move-out.en.docx",
+        "resident-faq.ar.json"
+      ],
+      "margin": 0.2662
+    },
+    {
+      "id": "b-en-13",
+      "kind": "same_language",
+      "pair": "en->en",
+      "rank": 1,
+      "top_score": 0.5866,
+      "top_source": "lease-and-move-out.en.docx",
+      "retrieved": [
+        "lease-and-move-out.en.docx",
+        "fees-and-payments.en.md",
+        "lease-and-move-out.en.docx",
+        "lease-and-move-out.en.docx",
+        "fees-and-payments.en.md",
+        "resident-faq.ar.json",
+        "fees-and-payments.en.md",
+        "fees-and-payments.en.md",
+        "maintenance.ar.md",
+        "resident-faq.ar.json"
+      ],
+      "margin": 0.1592
+    },
+    {
+      "id": "a-ar-14",
+      "kind": "cross_language",
+      "pair": "ar->en",
+      "rank": 1,
+      "top_score": 0.4099,
+      "top_source": "community-rules.en.md",
+      "retrieved": [
+        "community-rules.en.md",
+        "maintenance.en.md",
+        "resident-faq.en.json",
+        "visitors-and-access.ar.md",
+        "app-help.en.md",
+        "maintenance.en.md",
+        "app-help.en.md",
+        "app-help.ar.md",
+        "app-help.ar.md",
+        "app-help.en.md"
+      ],
+      "margin": 0.0938
+    },
+    {
+      "id": "a-ar-15",
+      "kind": "cross_language",
+      "pair": "ar->en",
+      "rank": 1,
+      "top_score": 0.4647,
+      "top_source": "safety-guide.en.pdf",
+      "retrieved": [
+        "safety-guide.en.pdf",
+        "safety-guide.en.pdf",
+        "lease-and-move-out.ar.docx",
+        "maintenance.en.md",
+        "lease-and-move-out.ar.docx",
+        "visitors-and-access.ar.md",
+        "maintenance.en.md",
+        "lease-and-move-out.ar.docx",
+        "notice-board.en.md",
+        "resident-faq.en.json"
+      ],
+      "margin": 0.1664
+    },
+    {
+      "id": "a-ar-16",
+      "kind": "cross_language",
+      "pair": "ar->en",
+      "rank": 1,
+      "top_score": 0.594,
+      "top_source": "facilities-booking.en.md",
+      "retrieved": [
+        "facilities-booking.en.md",
+        "facilities-booking.en.md",
+        "facilities-booking.en.md",
+        "app-help.ar.md",
+        "resident-faq.en.json",
+        "maintenance.en.md",
+        "fees-and-payments.ar.md",
+        "fees-and-payments.ar.md",
+        "lease-and-move-out.ar.docx",
+        "facilities-booking.en.md"
+      ],
+      "margin": 0.2406
+    },
+    {
+      "id": "a-en-17",
+      "kind": "cross_language",
+      "pair": "en->ar",
+      "rank": 1,
+      "top_score": 0.4368,
+      "top_source": "fees-and-payments.ar.md",
+      "retrieved": [
+        "fees-and-payments.ar.md",
+        "app-help.en.md",
+        "fees-and-payments.ar.md",
+        "maintenance.en.md",
+        "fees-and-payments.ar.md",
+        "fees-and-payments.ar.md",
+        "fees-and-payments.ar.md",
+        "notice-board.en.md",
+        "app-help.ar.md",
+        "resident-faq.en.json"
+      ],
+      "margin": 0.0208
+    },
+    {
+      "id": "a-en-18",
+      "kind": "cross_language",
+      "pair": "en->ar",
+      "rank": 1,
+      "top_score": 0.5201,
+      "top_source": "visitors-and-access.ar.md",
+      "retrieved": [
+        "visitors-and-access.ar.md",
+        "community-rules.en.md",
+        "community-rules.en.md",
+        "visitors-and-access.ar.md",
+        "app-help.en.md",
+        "community-rules.en.md",
+        "resident-faq.en.json",
+        "maintenance.en.md",
+        "facilities-booking.en.md",
+        "resident-faq.en.json"
+      ],
+      "margin": 0.1662
+    },
+    {
+      "id": "a-en-19",
+      "kind": "cross_language",
+      "pair": "en->ar",
+      "rank": 1,
+      "top_score": 0.4116,
+      "top_source": "lease-and-move-out.ar.docx",
+      "retrieved": [
+        "lease-and-move-out.ar.docx",
+        "lease-and-move-out.ar.docx",
+        "resident-faq.en.json",
+        "maintenance.en.md",
+        "fees-and-payments.ar.md",
+        "lease-and-move-out.ar.docx",
+        "fees-and-payments.ar.md",
+        "app-help.en.md",
+        "resident-faq.en.json",
+        "facilities-booking.en.md"
+      ],
+      "margin": 0.1639
+    },
+    {
+      "id": "b-en-20",
+      "kind": "cross_language",
+      "pair": "en->ar",
+      "rank": 2,
+      "top_score": 0.3979,
+      "top_source": "visitors-and-access.en.md",
+      "retrieved": [
+        "visitors-and-access.en.md",
+        "community-rules.ar.md",
+        "app-help.en.md",
+        "community-rules.ar.md",
+        "visitors-and-access.en.md",
+        "resident-faq.ar.json",
+        "facilities-booking.ar.md",
+        "visitors-and-access.en.md",
+        "visitors-and-access.en.md",
+        "community-rules.ar.md"
+      ],
+      "margin": -0.0314
+    },
+    {
+      "id": "b-en-21",
+      "kind": "cross_language",
+      "pair": "en->ar",
+      "rank": 1,
+      "top_score": 0.6616,
+      "top_source": "resident-faq.ar.json",
+      "retrieved": [
+        "resident-faq.ar.json",
+        "visitors-and-access.en.md",
+        "maintenance.ar.md",
+        "maintenance.ar.md",
+        "visitors-and-access.en.md",
+        "app-help.en.md",
+        "visitors-and-access.en.md",
+        "maintenance.ar.md",
+        "community-rules.ar.md",
+        "fees-and-payments.en.md"
+      ],
+      "margin": 0.4022
+    },
+    {
+      "id": "b-en-22",
+      "kind": "cross_language",
+      "pair": "en->ar",
+      "rank": 1,
+      "top_score": 0.4876,
+      "top_source": "safety-guide.ar.pdf",
+      "retrieved": [
+        "safety-guide.ar.pdf",
+        "safety-guide.ar.pdf",
+        "notice-board.ar.md",
+        "lease-and-move-out.en.docx",
+        "maintenance.ar.md",
+        "maintenance.ar.md",
+        "resident-faq.ar.json",
+        "visitors-and-access.en.md",
+        "fees-and-payments.en.md",
+        "maintenance.ar.md"
+      ],
+      "margin": 0.2413
+    },
+    {
+      "id": "b-ar-23",
+      "kind": "cross_language",
+      "pair": "ar->en",
+      "rank": 1,
+      "top_score": 0.5128,
+      "top_source": "lease-and-move-out.en.docx",
+      "retrieved": [
+        "lease-and-move-out.en.docx",
+        "lease-and-move-out.en.docx",
+        "lease-and-move-out.en.docx",
+        "fees-and-payments.en.md",
+        "fees-and-payments.en.md",
+        "fees-and-payments.en.md",
+        "resident-faq.ar.json",
+        "resident-faq.ar.json",
+        "fees-and-payments.en.md",
+        "maintenance.ar.md"
+      ],
+      "margin": 0.2015
+    },
+    {
+      "id": "b-ar-24",
+      "kind": "cross_language",
+      "pair": "ar->en",
+      "rank": 2,
+      "top_score": 0.4959,
+      "top_source": "app-help.ar.md",
+      "retrieved": [
+        "app-help.ar.md",
+        "visitors-and-access.en.md",
+        "visitors-and-access.en.md",
+        "app-help.en.md",
+        "facilities-booking.ar.md",
+        "facilities-booking.ar.md",
+        "visitors-and-access.en.md",
+        "community-rules.ar.md",
+        "facilities-booking.ar.md",
+        "resident-faq.ar.json"
+      ],
+      "margin": -0.0007
+    },
+    {
+      "id": "a-en-25",
+      "kind": "shared",
+      "pair": "en->shared",
+      "rank": 1,
+      "top_score": 0.7773,
+      "top_source": "app-help.en.md",
+      "retrieved": [
+        "app-help.en.md",
+        "app-help.ar.md",
+        "app-help.en.md",
+        "app-help.ar.md",
+        "app-help.en.md",
+        "app-help.en.md",
+        "app-help.en.md",
+        "maintenance.en.md",
+        "app-help.ar.md",
+        "facilities-booking.en.md"
+      ],
+      "margin": 0.4484
+    },
+    {
+      "id": "b-ar-26",
+      "kind": "shared",
+      "pair": "ar->shared",
+      "rank": 1,
+      "top_score": 0.658,
+      "top_source": "app-help.ar.md",
+      "retrieved": [
+        "app-help.ar.md",
+        "app-help.en.md",
+        "app-help.ar.md",
+        "maintenance.ar.md",
+        "app-help.ar.md",
+        "app-help.ar.md",
+        "app-help.ar.md",
+        "facilities-booking.ar.md",
+        "app-help.ar.md",
+        "resident-faq.ar.json"
+      ],
+      "margin": 0.3349
+    },
+    {
+      "id": "a-en-27",
+      "kind": "unanswerable",
+      "pair": "en->none",
+      "rank": null,
+      "top_score": 0.2878,
+      "top_source": "notice-board.en.md",
+      "retrieved": [
+        "notice-board.en.md",
+        "resident-faq.en.json",
+        "resident-faq.en.json",
+        "resident-faq.en.json",
+        "notice-board.en.md",
+        "maintenance.en.md",
+        "community-rules.en.md",
+        "community-rules.en.md",
+        "safety-guide.en.pdf",
+        "maintenance.en.md"
+      ],
+      "margin": null
+    },
+    {
+      "id": "b-ar-28",
+      "kind": "unanswerable",
+      "pair": "ar->none",
+      "rank": null,
+      "top_score": 0.3623,
+      "top_source": "community-rules.ar.md",
+      "retrieved": [
+        "community-rules.ar.md",
+        "maintenance.ar.md",
+        "safety-guide.ar.pdf",
+        "resident-faq.ar.json",
+        "maintenance.ar.md",
+        "maintenance.ar.md",
+        "safety-guide.ar.pdf",
+        "fees-and-payments.en.md",
+        "visitors-and-access.en.md",
+        "fees-and-payments.en.md"
+      ],
+      "margin": null
+    },
+    {
+      "id": "a-en-29",
+      "kind": "cross_tenant_probe",
+      "pair": "en->none",
+      "rank": null,
+      "top_score": 0.5873,
+      "top_source": "facilities-booking.en.md",
+      "retrieved": [
+        "facilities-booking.en.md",
+        "facilities-booking.en.md",
+        "facilities-booking.en.md",
+        "resident-faq.en.json",
+        "facilities-booking.en.md",
+        "app-help.en.md",
+        "community-rules.en.md",
+        "maintenance.en.md",
+        "resident-faq.en.json",
+        "community-rules.en.md"
+      ],
+      "margin": null
+    },
+    {
+      "id": "b-ar-30",
+      "kind": "cross_tenant_probe",
+      "pair": "ar->none",
+      "rank": null,
+      "top_score": 0.35,
+      "top_source": "facilities-booking.ar.md",
+      "retrieved": [
+        "facilities-booking.ar.md",
+        "resident-faq.ar.json",
+        "facilities-booking.ar.md",
+        "community-rules.ar.md",
+        "facilities-booking.ar.md",
+        "community-rules.ar.md",
+        "community-rules.ar.md",
+        "fees-and-payments.en.md",
+        "maintenance.ar.md",
+        "maintenance.ar.md"
+      ],
+      "margin": null
+    }
+  ]
+}

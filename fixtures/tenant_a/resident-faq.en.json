@@ -1,0 +1,31 @@
+{
+  "_fixture": "SYNTHETIC FIXTURE: fictional community Qamar Bay. Not real data.",
+  "title": "Qamar Bay Resident FAQ",
+  "records": [
+    {
+      "question": "When is rubbish collected?",
+      "answer": "General waste is collected every day at 07:00. Recycling is collected on Sundays and Wednesdays.",
+      "category": "Waste"
+    },
+    {
+      "question": "How do I book the service lift for moving in or out?",
+      "answer": "Book the service lift in the app at least 48 hours ahead. Moving is allowed between 08:00 and 18:00.",
+      "category": "Moving"
+    },
+    {
+      "question": "What does a replacement access card cost?",
+      "answer": "A lost or damaged access card is replaced for 100 SAR at the management office.",
+      "category": "Access"
+    },
+    {
+      "question": "Where do I collect parcels?",
+      "answer": "Parcels are held at the concierge desk in the clubhouse for up to 7 days.",
+      "category": "Deliveries"
+    },
+    {
+      "question": "Can I install a satellite dish on my balcony?",
+      "answer": "No. Satellite dishes are not allowed on balconies or façades. A shared satellite feed is provided in every unit.",
+      "category": "Alterations"
+    }
+  ]
+}

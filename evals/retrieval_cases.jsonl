@@ -1,0 +1,30 @@
+{"id": "a-en-01", "tenant": "tenant_a", "lang": "en", "kind": "same_language", "question": "What time does the pool open on Mondays?", "expected_sources": ["community-rules.en.md"]}
+{"id": "a-en-02", "tenant": "tenant_a", "lang": "en", "kind": "same_language", "question": "How long does an emergency maintenance request take?", "expected_sources": ["maintenance.en.md"]}
+{"id": "a-en-03", "tenant": "tenant_a", "lang": "en", "kind": "same_language", "question": "Which days is recycling collected?", "expected_sources": ["resident-faq.en.json"]}
+{"id": "a-en-04", "tenant": "tenant_a", "lang": "en", "kind": "same_language", "question": "Where should we gather if there is a fire?", "expected_sources": ["safety-guide.en.pdf"]}
+{"id": "a-ar-05", "tenant": "tenant_a", "lang": "ar", "kind": "same_language", "question": "كم رسوم الخدمات السنوية؟", "expected_sources": ["fees-and-payments.ar.md"]}
+{"id": "a-ar-06", "tenant": "tenant_a", "lang": "ar", "kind": "same_language", "question": "كم مدة صلاحية رمز دخول الزائر؟", "expected_sources": ["visitors-and-access.ar.md"]}
+{"id": "a-ar-07", "tenant": "tenant_a", "lang": "ar", "kind": "same_language", "question": "متى يجب أن أبلغ الإدارة برغبتي في تجديد العقد؟", "expected_sources": ["lease-and-move-out.ar.docx"]}
+{"id": "b-ar-08", "tenant": "tenant_b", "lang": "ar", "kind": "same_language", "question": "هل حجز ملعب التنس مجاني؟", "expected_sources": ["facilities-booking.ar.md"]}
+{"id": "b-ar-09", "tenant": "tenant_b", "lang": "ar", "kind": "same_language", "question": "كم تكلفة صيانة المكيف؟", "expected_sources": ["maintenance.ar.md"]}
+{"id": "b-ar-10", "tenant": "tenant_b", "lang": "ar", "kind": "same_language", "question": "متى تُجمع النفايات؟", "expected_sources": ["resident-faq.ar.json"]}
+{"id": "b-ar-11", "tenant": "tenant_b", "lang": "ar", "kind": "same_language", "question": "ما رقم تحويلة الأمن في حالة الحريق؟", "expected_sources": ["safety-guide.ar.pdf"]}
+{"id": "b-en-12", "tenant": "tenant_b", "lang": "en", "kind": "same_language", "question": "What is the late payment fee?", "expected_sources": ["fees-and-payments.en.md"]}
+{"id": "b-en-13", "tenant": "tenant_b", "lang": "en", "kind": "same_language", "question": "How quickly is my deposit refunded after I move out?", "expected_sources": ["lease-and-move-out.en.docx"]}
+{"id": "a-ar-14", "tenant": "tenant_a", "lang": "ar", "kind": "cross_language", "question": "هل يمكنني تربية كلب في الوحدة؟", "expected_sources": ["community-rules.en.md"]}
+{"id": "a-ar-15", "tenant": "tenant_a", "lang": "ar", "kind": "cross_language", "question": "متى يُجرى تدريب الإخلاء من الحريق؟", "expected_sources": ["safety-guide.en.pdf"]}
+{"id": "a-ar-16", "tenant": "tenant_a", "lang": "ar", "kind": "cross_language", "question": "كم تكلفة حجز القاعة المجتمعية لمناسبة خاصة؟", "expected_sources": ["facilities-booking.en.md"]}
+{"id": "a-en-17", "tenant": "tenant_a", "lang": "en", "kind": "cross_language", "question": "Is there a fee if I pay my invoice late?", "expected_sources": ["fees-and-payments.ar.md"]}
+{"id": "a-en-18", "tenant": "tenant_a", "lang": "en", "kind": "cross_language", "question": "How many nights can a guest stay over?", "expected_sources": ["visitors-and-access.ar.md"]}
+{"id": "a-en-19", "tenant": "tenant_a", "lang": "en", "kind": "cross_language", "question": "What does it cost to end my lease early?", "expected_sources": ["lease-and-move-out.ar.docx"]}
+{"id": "b-en-20", "tenant": "tenant_b", "lang": "en", "kind": "cross_language", "question": "Is the gym open 24 hours?", "expected_sources": ["community-rules.ar.md"]}
+{"id": "b-en-21", "tenant": "tenant_b", "lang": "en", "kind": "cross_language", "question": "Can I install a satellite dish on my balcony?", "expected_sources": ["resident-faq.ar.json"]}
+{"id": "b-en-22", "tenant": "tenant_b", "lang": "en", "kind": "cross_language", "question": "How often are the smoke detectors checked?", "expected_sources": ["safety-guide.ar.pdf"]}
+{"id": "b-ar-23", "tenant": "tenant_b", "lang": "ar", "kind": "cross_language", "question": "هل يُجدَّد عقد الإيجار تلقائياً؟", "expected_sources": ["lease-and-move-out.en.docx"]}
+{"id": "b-ar-24", "tenant": "tenant_b", "lang": "ar", "kind": "cross_language", "question": "كم عدد الزوار المسموح بدعوتهم في اليوم؟", "expected_sources": ["visitors-and-access.en.md"]}
+{"id": "a-en-25", "tenant": "tenant_a", "lang": "en", "kind": "shared", "question": "How do I add a family member to the app?", "expected_sources": ["app-help.en.md", "app-help.ar.md", "13-additional-users-and-directory.en.md", "13-additional-users-and-directory.ar.md"]}
+{"id": "b-ar-26", "tenant": "tenant_b", "lang": "ar", "kind": "shared", "question": "كيف أغيّر لغة التطبيق؟", "expected_sources": ["app-help.ar.md", "app-help.en.md", "16-profile-and-settings.ar.md", "16-profile-and-settings.en.md"]}
+{"id": "a-en-27", "tenant": "tenant_a", "lang": "en", "kind": "unanswerable", "question": "When does the school bus pick up children?", "expected_sources": []}
+{"id": "b-ar-28", "tenant": "tenant_b", "lang": "ar", "kind": "unanswerable", "question": "هل توجد شواحن للسيارات الكهربائية في المجمع؟", "expected_sources": []}
+{"id": "a-en-29", "tenant": "tenant_a", "lang": "en", "kind": "cross_tenant_probe", "question": "Is the tennis court free to book?", "expected_sources": [], "note": "Only tenant_b has a tennis court. Tenant A's padel booking page is the honest nearest match; tenant B's tennis page must never appear."}
+{"id": "b-ar-30", "tenant": "tenant_b", "lang": "ar", "kind": "cross_tenant_probe", "question": "كم سعر الساعة في ملعب البادل؟", "expected_sources": [], "note": "Only tenant_a has a padel court. Tenant B's tennis booking is the nearest match; tenant A's padel page must never appear."}

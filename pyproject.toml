@@ -1,0 +1,91 @@
+[project]
+name = "atar-ai-agent"
+version = "0.1.0"
+description = "RAG service for Atar resident apps (phase 1); agent comes in phase 2."
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=2.9.0",
+    "fastapi>=0.163.1",
+    "httpx2>=2.16.2",
+    "langchain-text-splitters>=1.1.3",
+    "openai>=3.52.0",
+    "playwright>=1.65.2",
+    "psycopg[binary,pool]>=3.3.9",
+    "pydantic-settings>=2.16.3",
+    "pypdf>=7.1.0",
+    "python-docx>=1.2.0",
+    "trafilatura>=2.3.1",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+atar-migrate = "atar_ai_agent.db:main"
+atar-ingest = "atar_ai_agent.ingest.cli:main"
+atar-ask = "atar_ai_agent.ask:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/atar_ai_agent"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E", "F", "W",  # pycodestyle + pyflakes
+    "I",            # import sorting
+    "UP",           # modern Python syntax
+    "B",            # likely bugs
+    "SIM",          # simplifications
+    "RUF",          # ruff-specific
+    "S",            # security (bandit)
+    "ASYNC",        # async pitfalls
+]
+# RUF001-003 flag "ambiguous" characters such as the Arabic-Indic zero (٠) or
+# the Arabic comma (،). In an Arabic-first codebase those are correct text.
+ignore = ["RUF001", "RUF002", "RUF003"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = [
+    "S101",          # assert is how pytest works
+    "S105", "S106", "S107",  # fake tokens in tests are not secrets
+]
+"evals/**" = ["S101"]  # eval harness: a failed assert must stop the run
+
+[tool.mypy]
+strict = true
+files = ["src", "tests", "scripts", "evals"]
+plugins = ["pydantic.mypy"]
+
+# The bake-off's bge-m3 adapter imports these; they exist only with
+# `--group bakeoff`, so type-check without them otherwise.
+[[tool.mypy.overrides]]
+module = ["sentence_transformers", "sentence_transformers.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = [
+    "db: needs the local Postgres from docker compose",
+    "browser: opens pages in the installed Google Chrome (skipped if it is missing)",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.1",
+    "pytest>=9.2.0",
+    "pytest-asyncio>=1.5.0",
+    "ruff>=0.17.5",
+]
+# Only for re-running the embedding bake-off with the self-hosted bge-m3
+# (pulls in torch, about 1 GB). Not installed by default, nor in production:
+#   uv run --group bakeoff python evals/embedding_bakeoff.py --model bge-m3
+bakeoff = [
+    "sentence-transformers>=6.3.0",
+]
